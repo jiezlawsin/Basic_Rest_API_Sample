@@ -37,8 +37,10 @@ angular.module('personsApiApp')
 	    	console.log(response);
 	    	var person = _.where($scope.persons, {id: $id});
 	    	$scope.persons = _.without($scope.persons, person[0]); 
+	    	alert("Successfully deleted the person");
 		}, function errorCallback(response) {
 			console.log(response);
+			alert("Server Error");
 		});
 	};
   })
@@ -55,9 +57,11 @@ angular.module('personsApiApp')
 	      data: $scope.newPerson
 	    }).then(function successCallback(response) {
 	    	console.log(response);
+	    	alert("Successfully created a person");
 	    	$location.path( '/' );
 		}, function errorCallback(response) {
 			console.log(response);
+			alert("Server Error");
 		});
   	};
   })
@@ -76,6 +80,8 @@ angular.module('personsApiApp')
     	console.log($scope.currentPerson);
 	}, function errorCallback(response) {
 		console.log(response);
+		alert("Server Error");
+		$location.path( '/' );
 	});
 
 	$scope.editPerson = function() {
@@ -89,9 +95,11 @@ angular.module('personsApiApp')
 	      data: data
 	    }).then(function successCallback(response) {
 	    	console.log(response);
+	    	alert("Successfully udpated the person");
 	    	$location.path( '/' );
 		}, function errorCallback(response) {
 			console.log(response);
+			alert("Server Error");
 		});
 	};
   	
