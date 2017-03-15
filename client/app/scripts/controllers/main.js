@@ -84,12 +84,12 @@ angular.module('personsApiApp')
 		};
 		console.log(data);
 		$http({
-	      method: 'put',
+	      method: 'post',
 	      url: URL.API + 'person/' + $scope.id,
 	      data: data
 	    }).then(function successCallback(response) {
 	    	console.log(response);
-	    	// $location.path( '/' );
+	    	$location.path( '/' );
 		}, function errorCallback(response) {
 			console.log(response);
 		});

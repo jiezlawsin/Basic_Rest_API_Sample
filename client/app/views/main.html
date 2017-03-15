@@ -12,8 +12,7 @@
       <td>{{ person.id }}</td>
       <td>{{ person.name }}</td>
       <td>
-        <button type="button" class="btn btn-info">View</button>
-        <button type="button" class="btn btn-warning" ng-click="go('/edit/' + person.id)">Edit</button>
+        <button type="button" class="btn btn-info" ng-click="go('/edit/' + person.id)">Edit</button>
         <button type="button" class="btn btn-danger" ng-click="delete(person.id)">Delete</button>
       </td>
     </tr>
