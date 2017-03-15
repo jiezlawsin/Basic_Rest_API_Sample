@@ -3,14 +3,14 @@
   <thead>
     <tr>
       <th>ID</th>
-      <th>Name</th>
+      <th>Info</th>
       <th>Options</th>
     </tr>
   </thead>
   <tbody>
     <tr ng-repeat="person in persons" ng-if="persons.length > 0">
       <td>{{ person.id }}</td>
-      <td>{{ person.name }}</td>
+      <td>{{ person.first_name }} {{ person.last_name }} | {{ person.contact_number }}</td>
       <td>
         <button type="button" class="btn btn-info" ng-click="go('/edit/' + person.id)">Edit</button>
         <button type="button" class="btn btn-danger" ng-click="delete(person.id)">Delete</button>
