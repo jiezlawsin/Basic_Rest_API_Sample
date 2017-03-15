@@ -11,7 +11,9 @@ class Persons extends BaseModel
     use SoftDeletes;
 
     protected $fillable = [
-    	'name',
+    	'first_name',
+    	'last_name',
+    	'contact_number',
     	];
 
 }
