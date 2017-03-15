@@ -47,10 +47,11 @@ angular.module('personsApiApp')
   .controller('CreateCtrl', function (URL, $http, $scope, $location) {
   	console.log(URL.API);
   	$scope.newPerson = {
-  		name : ''
+  		first_name : '',
+  		last_name : '',
+  		contact_number : ''
   	};
   	$scope.createPerson = function() {
-  		console.log($scope.newPerson.name);
 	    $http({
 	      method: 'POST',
 	      url: URL.API + 'person',
@@ -86,7 +87,9 @@ angular.module('personsApiApp')
 
 	$scope.editPerson = function() {
 		var data = {
-			name : $scope.currentPerson.name
+			first_name : $scope.currentPerson.first_name,
+			last_name : $scope.currentPerson.last_name,
+			contact_number : $scope.currentPerson.contact_number,
 		};
 		console.log(data);
 		$http({
