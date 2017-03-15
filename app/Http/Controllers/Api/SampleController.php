@@ -70,25 +70,25 @@ class SampleController extends Controller
     {
         $input = $request->all();
         $data = Persons::find($id);
-        $data->update($input);
+        print_r($input);
+        // $data->update($input);
 
-        if (! is_null($data)) {
-            $response = [];
-            $response['message'] = 'Successfully updated data.';
-            $response['data'] = $data;
-            $status = 200;
-        } else {
-            $response = [];
-            $response['message'] = 'Failed to update data.';
-            $status = 500;
-        }
+        // if (! is_null($data)) {
+        //     $response = [];
+        //     $response['message'] = 'Successfully updated data.';
+        //     $response['data'] = $data;
+        //     $status = 200;
+        // } else {
+        //     $response = [];
+        //     $response['message'] = 'Failed to update data.';
+        //     $status = 500;
+        // }
 
-        return response($response, $status);
+        // return response($response, $status);
     }
 
     public function destroy($id)
     {
-        $input = $request->all();
         Persons::destroy($id);
 
         $response = [];

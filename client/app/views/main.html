@@ -1,3 +1,4 @@
+<button type="button" class="btn btn-primary" ng-click="go('/create')">Create</button>
 <table class="table table-responsive">
   <thead>
     <tr>
@@ -7,14 +8,18 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Jiez Lawsin</td>
+    <tr ng-repeat="person in persons" ng-if="persons.length > 0">
+      <td>{{ person.id }}</td>
+      <td>{{ person.name }}</td>
       <td>
         <button type="button" class="btn btn-info">View</button>
-        <button type="button" class="btn btn-warning">Edit</button>
-        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-warning" ng-click="go('/edit/' + person.id)">Edit</button>
+        <button type="button" class="btn btn-danger" ng-click="delete(person.id)">Delete</button>
       </td>
+    </tr>
+    <tr ng-if="persons.length == 0" style="text-align: center;">
+      <td colspan="3">No Results Found</td>
     </tr>
   </tbody>
 </table>
+<br>
