@@ -13,3 +13,6 @@
 
 Route::get('api/person/', array('as'=>'apiSample','uses'=>'SampleController@all'));
 Route::get('api/person/{id}', array('as'=>'apiSample','uses'=>'SampleController@find'));
+Route::post('api/person/{id}', array('as'=>'apiSample','uses'=>'SampleController@store'));
+Route::put('api/person/{id}', array('as'=>'apiSample','uses'=>'SampleController@update'));
+Route::delete('api/person/{id}', array('as'=>'apiSample','uses'=>'SampleController@destroy'));
