@@ -1,9 +1,9 @@
 {
-  "name": "SumoLaravelBase",
+  "name": "LaravelBase",
   "description": "",
   "main": "",
   "authors": [
-    "Derrick Nicolas <derrick.nicolas@outlook.com>"
+    "Jiez Lawsin"
   ],
   "license": "MIT",
   "moduleType": [],
