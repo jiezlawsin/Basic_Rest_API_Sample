@@ -7,11 +7,12 @@ Front-end : Angular JS
 # do:
 * composer install
 * bower install
+* php artisan migrate
+* php artisan serve
 * npm and bower install inside 'client' directory
-# Server
 
+# Server
 Service expects the server is in localhost:8000 by php artisan serve
 * run grunt serve inside 'client' folder
-
 # 
 * can't implement PUT request for update. Can't catch the data from the service. Instead, I use POST request for the update module. 
